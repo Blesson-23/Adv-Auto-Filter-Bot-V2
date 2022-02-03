@@ -57,12 +57,10 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
+    await bot.send_sticker(
         chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(
-                update.from_user.first_name),
+        sticker= "CAACAgQAAxkBAAEBzLBh-_R5G4aNI0SKL6AwJ4FoJ9llrQACCAMAAjcRFBMdq6ktLDhanx4E",
         reply_markup=reply_markup,
-        parse_mode="html",
         reply_to_message_id=update.message_id
     )
 
@@ -78,11 +76,10 @@ async def help(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
+    await bot.send_sticker(
         chat_id=update.chat.id,
-        text=Translation.HELP_TEXT,
+        sticker= "CAACAgUAAxkBAAEBzLJh-_SZOhRJy1KmST2XW7_dXJNWDQACbQMAAhkv4FTczvYCsUensR4E",
         reply_markup=reply_markup,
-        parse_mode="html",
         reply_to_message_id=update.message_id
     )
 
@@ -96,11 +93,9 @@ async def about(bot, update):
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
+    await bot.send_sticker(
         chat_id=update.chat.id,
-        text=Translation.ABOUT_TEXT,
+        sticker= "CAACAgQAAxkBAAEBzLRh-_Sum3_ivhfSoysO1zyZGSjiVwAC_QIAAjcRFBM19Er-v9NUZh4E",
         reply_markup=reply_markup,
-        disable_web_page_preview=True,
-        parse_mode="html",
         reply_to_message_id=update.message_id
     )
